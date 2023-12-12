@@ -31,6 +31,7 @@ nav {
   display: flex;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 nav a {
@@ -38,8 +39,8 @@ nav a {
   text-decoration: none;
   position: relative;
   border-radius: 5px;
-  font-size: 25px;
-  margin: 40px;
+  font-size: 23px;
+  margin: 30px;
   transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -65,13 +66,14 @@ nav a:hover::before {
 
 nav a i {
   margin-right: 10px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 section {
-  padding: 20px;
-  margin: 20px;
+  padding: 10px;
+  margin: 10px;
   padding-left: 80px;
+  padding-right: 40px;
   border-radius: 10px;
   color: var(--text);
 }
@@ -135,19 +137,21 @@ h3 {
 
 .card-container {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
 .card-interest {
-  max-width: 1310px;
-  width: 335px;
+  width: 100%;
   margin-right: 30px;
   margin-bottom: 30px;
-  padding: 40px;
+  padding: 20px;
   background-color: var(--secondary);
   border-radius: 25px;
   text-align: center;
   padding-bottom: 30px;
+  padding-left: 35px;
+  padding-right: 35px;
   transform: scale(1);
   transition: transform 0.3s ease;
 }
@@ -158,11 +162,11 @@ h3 {
 
 .card-interest h3 {
   margin-top: 5px;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .card-interest p {
-  font-size: 23px;
+  font-size: 20px;
   text-align: justify;
   line-height: 1.5;
 }
@@ -227,6 +231,11 @@ h3 {
   margin-left: 0px;
 }
 
+.testimonials-container {
+  display: flex;
+  flex-direction: row;
+}
+
 #testimonials p {
   font-size: 25px;
 }
@@ -241,8 +250,8 @@ h3 {
   padding: 20px;
   margin-right: 20px;
   margin-left: 0px;
-  height: 510px;
-  width: 270px;
+  height: 100%;
+  max-width: 100%;
   display: inline-block;
   vertical-align: top;
   text-align: center;
@@ -383,7 +392,7 @@ h3 {
   border-radius: 10px;
   margin-right: 60px;
   margin-top: -30px;
-  width: 200px;
+  width: 50%;
   transition: background-color 0.3s ease, transform 0.05s ease-in-out;
 }
 
@@ -676,7 +685,7 @@ button.search-button:active {
 }
 
 .field-holder input {
-  margin-right: 30px;
+  margin-right: 20px;
   margin-top: 10px;
   box-sizing: border-box;
   padding-top: 5px;
@@ -688,11 +697,11 @@ button.search-button:active {
 }
 
 .field-holder #title {
-  width: 260px;
+  width: 230px;
 }
 
 .field-holder #artist {
-  width: 240px;
+  width: 215px;
 }
 
 .field-holder #genre {
@@ -785,7 +794,7 @@ button.search-button:active {
 
 #playlist_message {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 #playlist_message h3 {

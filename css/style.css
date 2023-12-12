@@ -6,78 +6,105 @@
   --accent: #858585;
 }
 
-body {
-  background-color: var(--background);
-  font-family: "Inter", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+* {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
 }
 
-h1,
-h2 {
-  background-image: linear-gradient(to right, var(--text), var(--accent));
+body {
+  background-color: var(--background);
+}
+
+.hypertechs-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hypertechs-title {
+  font-size: 50px;
+  background-image: linear-gradient(to right, #4a4949, #5e5e5e, #b3b3b3, #747e7f);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   display: inline-block;
+  background-size: 200% auto; 
+  animation: gradientAnimation 4s linear infinite; 
 }
 
-h1 {
-  font-size: 70px;
-  margin-bottom: -20px;
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-h2 {
-  font-size: 22px;
+.hypertechs-title p {
+  font-size: 25px;
   font-weight: 600;
-}
-
-.team-members-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.team-member {
   text-align: center;
-  margin: 20px;
-  z-index: 2;
-  transition: transform 0.3s ease;
-  text-decoration: none;
 }
 
-.team-member img {
-  position: relative;
-  width: 210px;
+.hypertechs-team-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.hypertechs-team-container img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15px;
   border: 4px solid;
   border-image: linear-gradient(to right, var(--primary), var(--secondary));
   border-image-slice: 1;
   filter: saturate(70%);
-  transition: transform 0.3s ease;
 }
 
-.team-member img:active {
-  transform: scale(0.9);
+.hypertechs-member-info {
+  width: 220px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.team-member:hover {
-  transform: scale(1.07);
+.hypertechs-member-info a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.member-name {
+.hypertechs-member-info:hover {
+  transform: scale(1.06);
+}
+
+.hypertechs-member-info:active {
+  transform: scale(0.91);
+}
+
+.hypertechs-member-info a .member-name {
   color: var(--text);
-  font-size: 22px;
   font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 5px;
 }
 
-.member-desc {
-  color: var(--text);
-  font-size: 17px;
-  font-weight: 100;
-  margin-top: -17px;
+.hypertechs-member-info a .member-desc {
+  color: var(--primary);
+  font-weight: 400;
 }
