@@ -2,15 +2,15 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: https://hypertechs.netlify.app");
 header("Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token");
 
-// Establishes a database connection 
-$servername = "127.0.0.1";
-$username = "u754510873_user_martinez";
-$password = "&aW7&RKq;";
-$dbname = "u754510873_martinezDB";
+// Establishes the database connection
+$servername = "127.0.0.1:3306";
+$username = "u754510873_user_exercise";
+$password = "zK9]bR|Sgx/U";
+$dbname = "u754510873_db_exercise18";
 
 // Create a connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -29,10 +29,10 @@ switch ($method) {
         if (isset($_GET['id'])) {
             // Fetch a specific song by ID
             $songId = $_GET['id'];
-            $sql = "SELECT * FROM playlists WHERE id = $songId";
+            $sql = "SELECT * FROM martinez_table WHERE id = $songId";
         } else {
             // Fetch all songs
-            $sql = "SELECT * FROM playlists";
+            $sql = "SELECT * FROM martinez_table";
         }
         $result = $conn->query($sql);
 
@@ -51,14 +51,14 @@ switch ($method) {
 
     case 'POST':
         // Handle create (POST) operation
-        // Insert data into the 'playlists' table
+        // Insert data into the 'martinez_table' table
         $title = mysqli_real_escape_string($conn, $_POST['title']);
         $artist = mysqli_real_escape_string($conn, $_POST['artist']);
         $genre = mysqli_real_escape_string($conn, $_POST['genre']);
         $year = mysqli_real_escape_string($conn, $_POST['year']);
         $plays = mysqli_real_escape_string($conn, $_POST['plays']);
 
-        $sql = "INSERT INTO playlists (title, artist, genre, year, plays) 
+        $sql = "INSERT INTO martinez_table (title, artist, genre, year, plays) 
                 VALUES ('$title', '$artist', '$genre', '$year', '$plays')";
 
         if ($conn->query($sql) === TRUE) {
@@ -71,7 +71,7 @@ switch ($method) {
         // Inside the 'PATCH' case
     case 'PATCH':
         // Handle update (PATCH) operation
-        // Update data in the 'playlists' table
+        // Update data in the 'martinez_table' table
         parse_str(file_get_contents("php://input"), $patchVars);
 
         $songId = $patchVars['id'];
@@ -81,7 +81,7 @@ switch ($method) {
         $year = mysqli_real_escape_string($conn, $patchVars['year']);
         $plays = mysqli_real_escape_string($conn, $patchVars['plays']);
 
-        $sql = "UPDATE playlists 
+        $sql = "UPDATE martinez_table 
                     SET title='$title', artist='$artist', 
                     genre='$genre', year='$year', plays='$plays' 
                     WHERE id=$songId";
@@ -97,9 +97,9 @@ switch ($method) {
 
     case 'DELETE':
         // Handle delete (DELETE) operation
-        // Delete data from the 'playlists' table
+        // Delete data from the 'martinez_table' table
         $songId = $_GET['id'];
-        $sql = "DELETE FROM playlists WHERE id=$songId";
+        $sql = "DELETE FROM martinez_table WHERE id=$songId";
 
         if ($conn->query($sql) === TRUE) {
             echo "Song deleted from the playlist successfully!";
@@ -110,7 +110,7 @@ switch ($method) {
 
     case 'OPTIONS':
         // Respond to preflight requests
-        header("Access-Control-Allow-Origin: http://localhost:3000");
+        header("Access-Control-Allow-Origin: https://hypertechs.netlify.app");
         header("Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS");
         header("Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token");
         header('Content-Type: application/json');
