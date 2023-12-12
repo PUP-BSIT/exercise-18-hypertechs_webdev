@@ -267,10 +267,10 @@
     <section id="rest_api">
       <div class="wrapped-desc">
         <h2>Spotify Wrapped 2023 <span>using REST API</span></h2>
-        <p>It's that time of the year again:
-          let's take on a journey back in time
+        <p>It's that time of the year again!
+          Let's take you on a journey back in time
           and relive the soundtracks that made you
-          smile 😄, dance 🕺, and maybe shed a tear 🥹
+          smile 😄, dance 🕺, and shed a tear 🥹
           Add and rewind the tunes that made your 2023 special through
           this customized playlist.
           Cheers to the soundtrack of your life, visitor! 🥂</p>
@@ -281,18 +281,20 @@
           <div class="field-holder">
             <label for="title">
               <i class="fa-solid fa-bars-staggered"></i>Title</label>
-            <input type="text" id="title" placeholder="e.g., The Hills" required>
+            <input type="text" id="title" 
+            placeholder="e.g., The Hills" required>
           </div>
 
           <div class="field-holder">
             <label for="artist"><i class="fas fa-user"></i> Artist</label>
-            <input type="text" id="artist" placeholder="e.g., The Weeknd" required>
+            <input type="text" id="artist" 
+            placeholder="e.g., The Weeknd" required>
           </div>
 
           <div class="field-holder">
             <label for="genre"><i class="fas fa-music"></i> Genre</label>
             <select id="genre" required>
-              <option value="" disabled selected>Select a genre</option>
+              <option value="" disabled selected>e.g., Pop</option>
             </select>
           </div>
 
@@ -303,11 +305,12 @@
 
           <div class="field-holder">
             <label for="plays"><i class="fas fa-clock"></i> Total Plays</label>
-            <input type="number" id="plays" placeholder="e.g., 55" required>
+            <input type="number" id="plays" placeholder="e.g., 69" required>
           </div>
 
           <button type="button" onclick="addSong()">+ Add</button>
         </form>
+
       </div>
 
       <div class="playlist-container">
@@ -323,6 +326,7 @@
           </tr>
 
         </table>
+      </div>
       </div>
       <div id="edit_modal" class="modal">
         <div class="modal-content">
@@ -346,11 +350,15 @@
             <label for="edit-plays">Total Plays:</label>
             <input type="number" id="edit-plays" required>
 
-            <button type="button" id="edit-submit" onclick="updateSong()">Update</button>
+            <button type="button" id="edit-submit" 
+            onclick="updateSong()">Update</button>
           </form>
         </div>
       </div>
-
+      <div id="playlist_message">
+        <h3> Nice playlist! Thanks for rocking
+          with us, visitor. See you in next year's Wrapped 👋🏼"
+        </h3>
     </section>
 
     <section id="comments">
@@ -360,7 +368,8 @@
         <label for="name">Name:</label>
         <input type="text" id="name" placeholder="Enter your name" required />
         <label for="comment">Comment:</label>
-        <textarea id="comment" placeholder="Write a comment" required></textarea>
+        <textarea id="comment" 
+        placeholder="Write a comment" required></textarea>
         <button type="button" onclick="addComment()">
           <i class="fas fa-paper-plane"></i> Submit
         </button>

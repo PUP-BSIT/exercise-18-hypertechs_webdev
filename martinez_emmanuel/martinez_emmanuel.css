@@ -104,7 +104,7 @@ h3 {
 }
 
 .home-text h1 {
-  font-size: 63px;
+  font-size: 60px;
 }
 
 .home-text p {
@@ -231,6 +231,10 @@ h3 {
   font-size: 25px;
 }
 
+.testimonial-card h3 {
+  font-weight: 600;
+}
+
 .testimonial-card {
   background-color: var(--secondary);
   border-radius: 20px;
@@ -352,7 +356,6 @@ h3 {
   height: 40px;
   margin-right: 40px;
   margin-top: -30px;
-  font-family: Google Sans, sans-serif;
   color: var(--text);
   resize: none;
 }
@@ -361,7 +364,6 @@ h3 {
 #comment_form textarea::placeholder {
   color: var(--background);
   font-size: 22px;
-  font-family: Google Sans, sans-serif;
   padding-left: 10px;
 }
 
@@ -377,10 +379,10 @@ h3 {
   border: none;
   cursor: pointer;
   font-size: 20px;
+  font-weight: 500;
   border-radius: 10px;
   margin-right: 60px;
   margin-top: -30px;
-  font-family: Google Sans, sans-serif;
   width: 200px;
   transition: background-color 0.3s ease, transform 0.05s ease-in-out;
 }
@@ -458,8 +460,9 @@ h3 {
   cursor: pointer;
   color: var(--text);
   font-size: 20px;
-  padding-left: 20px;
-  background-position: right 115px center;
+  font-weight: 500;
+  padding-left: 35px;
+  background-position: right 120px center;
   background-repeat: no-repeat;
   background-size: 20px;
   background-image: url("images/sort_icon.png");
@@ -591,6 +594,7 @@ button.search-button:active {
 }
 
 #rest_api {
+  margin-bottom: 100px;
   margin-right: 60px;
   margin-left: 0px;
   padding: 0;
@@ -599,10 +603,10 @@ button.search-button:active {
 #rest_api h2 {
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   margin-top: 75px;
   position: relative;
-  font-size: 3em;
+  font-size: 4em;
   overflow: hidden;
   background: linear-gradient(
     90deg,
@@ -616,9 +620,9 @@ button.search-button:active {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: gradientAnimation 4s infinite; /* Adjust the duration as needed */
+  animation: gradientAnimation 4s infinite;
   animation-timing-function: ease-in-out;
-  background-size: 800% 100%; /* Adjust the size as needed */
+  background-size: 800% 100%;
 }
 
 @keyframes gradientAnimation {
@@ -656,8 +660,8 @@ button.search-button:active {
 }
 
 .field-holder {
-  flex: 0 0 2%; /* Adjust the width based on your design */
-  margin-bottom: 15px; /* Add spacing between fields */
+  flex: 0 0 2%;
+  margin-bottom: 15px;
 }
 
 .field-holder label {
@@ -684,15 +688,15 @@ button.search-button:active {
 }
 
 .field-holder #title {
-  width: 270px;
+  width: 260px;
 }
 
 .field-holder #artist {
-  width: 250px;
+  width: 240px;
 }
 
 .field-holder #genre {
-  width: 200px;
+  width: 170px;
 }
 
 .field-holder #year {
@@ -700,7 +704,7 @@ button.search-button:active {
 }
 
 .field-holder #plays {
-  width: 170px;
+  width: 160px;
 }
 
 .field-holder select {
@@ -750,7 +754,7 @@ button.search-button:active {
   font-weight: bold;
   border: none;
   border-radius: 10px;
-  background-color: var(--secondary);
+  background-color: #102a21;
   color: var(--primary);
   transition: background-color 0.3s ease, transform 0.05s ease-in-out;
 }
@@ -775,8 +779,19 @@ button.search-button:active {
 }
 
 .playlist-container h3 {
-  font-size: 40px;
-  font-weight: 500;
+  font-size: 45px;
+  font-weight: 700;
+}
+
+#playlist_message {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#playlist_message h3 {
+  color: var(--text);
+  font-size: 25px;
+  font-weight: 400;
 }
 
 table {
@@ -837,7 +852,7 @@ th {
 
 .edit-btn:active,
 .delete-btn:active {
-  transform: scale(0.95); /* Adjust the scaling factor as needed */
+  transform: scale(0.95);
 }
 
 /* Style the modal */
@@ -859,8 +874,8 @@ th {
   background-color: var(--background);
   border-radius: 15px;
   padding: 40px;
-  width: 60%; /* Adjust the overall width of the modal */
-  max-width: 500px; /* Set a maximum width if needed */
+  width: 60%;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -943,5 +958,3 @@ footer p {
   font-size: 25px;
   color: var(--primary);
 }
-
-

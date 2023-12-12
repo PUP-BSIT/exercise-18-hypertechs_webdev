@@ -167,7 +167,8 @@ function displayCountryDetails(country, region_countries) {
   regionCountriesContainer.innerHTML = "";
 
   const quickFactsDescription = document.createElement("p");
-  quickFactsDescription.textContent = `Here are some quick facts about ${country.name.common}:`;
+  quickFactsDescription.textContent = 
+  `Here are some quick facts about ${country.name.common}:`;
   quickFactsDescription.style.paddingLeft = "40px";
   countryDetailsContainer.appendChild(quickFactsDescription);
 
