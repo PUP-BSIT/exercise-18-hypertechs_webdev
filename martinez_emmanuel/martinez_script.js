@@ -132,7 +132,7 @@ async function searchCountries() {
     );
     const countryDetailsData = await countryDetailsResponse.json();
 
-    if (countryDetailsData.length === 0) {
+    if (!countryDetailsData.length) {
       alert("No country found with the provided keyword.");
       return;
     }
@@ -221,7 +221,7 @@ function displayCountryDetails(country, region_countries) {
   });
   countryDetailsContainer.appendChild(detailsList);
 
-  if (region_countries.length > 1) {
+  if (region_countries.length) {
     region_countries.sort((a, b) => a.name.common.localeCompare(b.name.common));
     const regionDescriptionContainer = document.createElement("div");
     regionDescriptionContainer.style.width = "450px";
@@ -423,7 +423,7 @@ function addSong() {
     });
 }
 
-// Variable to store the currently editing song ID
+// letiable to store the currently editing song ID
 let editingSongId;
 
 // Function to open the edit modal
@@ -505,7 +505,7 @@ function updateSong() {
 // Delete the song
 function deleteSong(songId) {
   // Confirm with the user before deleting
-  var confirmDelete = confirm("Are you sure you want to delete this song?");
+  let confirmDelete = confirm("Are you sure you want to delete this song?");
 
   if (confirmDelete) {
     // Send fetch request to delete the song

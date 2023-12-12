@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="martinez_emmanuel.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <title>Emmanuel Martinez Page</title>
 </head>
 
@@ -278,14 +281,12 @@
           <div class="field-holder">
             <label for="title">
               <i class="fa-solid fa-bars-staggered"></i>Title</label>
-            <input type="text" id="title" 
-            placeholder="e.g., The Hills" required>
+            <input type="text" id="title" placeholder="e.g., The Hills" required>
           </div>
 
           <div class="field-holder">
             <label for="artist"><i class="fas fa-user"></i> Artist</label>
-            <input type="text" id="artist" 
-            placeholder="e.g., The Weeknd" required>
+            <input type="text" id="artist" placeholder="e.g., The Weeknd" required>
           </div>
 
           <div class="field-holder">
@@ -345,8 +346,7 @@
             <label for="edit-plays">Total Plays:</label>
             <input type="number" id="edit-plays" required>
 
-            <button type="button" id="edit-submit" 
-            onclick="updateSong()">Update</button>
+            <button type="button" id="edit-submit" onclick="updateSong()">Update</button>
           </form>
         </div>
       </div>
@@ -360,8 +360,7 @@
         <label for="name">Name:</label>
         <input type="text" id="name" placeholder="Enter your name" required />
         <label for="comment">Comment:</label>
-        <textarea id="comment" 
-        placeholder="Write a comment" required></textarea>
+        <textarea id="comment" placeholder="Write a comment" required></textarea>
         <button type="button" onclick="addComment()">
           <i class="fas fa-paper-plane"></i> Submit
         </button>

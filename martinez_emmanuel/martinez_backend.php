@@ -5,7 +5,8 @@ ini_set('display_errors', 1);
 header("Access-Control-Allow-Origin: http://localhost:3000");
 header("Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token");
-// Establish a database connection (modify these settings accordingly)
+
+// Establishes a database connection 
 $servername = "127.0.0.1";
 $username = "u754510873_user_martinez";
 $password = "&aW7&RKq;";

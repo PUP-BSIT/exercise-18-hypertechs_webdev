@@ -8,7 +8,7 @@
 
 body {
   background-color: var(--background);
-  font-family: "Google Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,12 +17,9 @@ body {
   margin: 0;
 }
 
-h1, h2 {
- background-image: linear-gradient(
-    to right,
-    var(--text),
-    var(--accent)
-  );
+h1,
+h2 {
+  background-image: linear-gradient(to right, var(--text), var(--accent));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -36,7 +33,7 @@ h1 {
 
 h2 {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .team-members-container {
@@ -62,11 +59,10 @@ h2 {
   border-image-slice: 1;
   filter: saturate(70%);
   transition: transform 0.3s ease;
-
 }
 
 .team-member img:active {
-  transform: scale(0.90);
+  transform: scale(0.9);
 }
 
 .team-member:hover {
@@ -76,7 +72,7 @@ h2 {
 .member-name {
   color: var(--text);
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .member-desc {
@@ -85,4 +81,3 @@ h2 {
   font-weight: 100;
   margin-top: -17px;
 }
-
