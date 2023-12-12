@@ -18,7 +18,7 @@ For this week's exercise, we've added a unique new section in each of our profil
 
 🗑️ **Delete**: Streamline and declutter by removing items or entire lists.
 
-To achieve this, we've created our own **_custom-made_ REST API** on the backend that works seemlessly behind the scenes at our newest web domain. Be sure to check it out!
+To achieve this, we created our own **_custom-made_ REST API** on the backend that works seemlessly behind the scenes at our newest web domain. Be sure to check it out!
 
 ## Portfolio Website
 
@@ -26,7 +26,7 @@ To achieve this, we've created our own **_custom-made_ REST API** on the backend
 
 This website is made using:
 
-[![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) [![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS) [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![Netlify Status](https://api.netlify.com/api/v1/badges/b420a069-4ee2-4b94-9e43-2c9eff6fcc4b/deploy-status)](https://app.netlify.com/sites/hypertechs/deploys)
+[![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) [![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS) [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)](https://www.php.net/) [![Netlify Status](https://api.netlify.com/api/v1/badges/b420a069-4ee2-4b94-9e43-2c9eff6fcc4b/deploy-status)](https://app.netlify.com/sites/hypertechs/deploys)
 
 ---
 
