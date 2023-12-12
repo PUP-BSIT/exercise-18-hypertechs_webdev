@@ -6,7 +6,19 @@
 
 🤖 Welcome...back to HyperTechs! We are a vibrant collective of students at PUP Taguig with a shared passion of honing our skills in web development. We dive deep into HTML, CSS, and JavaScript on a mission to master the art and science of crafting captivating and functional websites.
 
-🆕 For this week's exercise, we've added a unique new section in each of our profile website based on our interests, where visitors can perform CRUD (Create, Read, Update, and Delete) using a simple custom-made REST API that works behind on our newly-created web domain. Be sure to check it out!
+## Exercise 18 🆕
+
+For this week's exercise, we've added a unique new section in each of our profile website based on our interests, where visitors can:
+
+✨ **Create**: Craft personalized lists for your unique needs
+
+📖 **Read**: Dive into the lists for quick insights and organization
+
+🚀 **Update**: Easily modify and refine lists anytime you want; and
+
+🗑️ **Delete**: Streamline and declutter by removing items or entire lists.
+
+To achieve this, we've created our own **_custom-made_ REST API** on the backend that works seemlessly behind the scenes at our newest web domain. Be sure to check it out!
 
 ## Portfolio Website
 
