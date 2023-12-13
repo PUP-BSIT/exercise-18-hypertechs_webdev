@@ -202,68 +202,63 @@
                     <a href = "./countries.html" 
                     target="blank">Countries of the World</a>
                 </ul>
+            </div>
         </div>
-<section id="book_catalog">
-    <div class="wrapped-desc">
-      <h2>Book Catalog <span>2023</span></h2>
-    </div>
-
-    <div class="wrapped-form">
-      <form id="book_form">
-        <div class="field-holder">
-          <label for="title">Title</label>
-          <input type="text" id="title" placeholder="e.g., Pride and Prejudice" required>
-        </div>
-
-        <div class="field-holder">
-          <label for="author">Author</label>
-          <input type="text" id="author" placeholder="e.g., Jane Austen" required>
-        </div>
-
-        <div class="field-holder">
-          <label for="genre">Genre</label>
-          <select id="genre" required>
-            <option value="" disabled selected>Select a genre</option>
-            <option value="fiction">Fiction</option>
-            <option value="non-fiction">Non-Fiction</option>
-            <option value="mystery">Mystery</option>
-            <option value="science-fiction">Science Fiction</option>
-          </select>
-        </div>
-
-        <div class="field-holder">
-          <label for="year">Year</label>
-          <input type="text" id="year" placeholder="e.g., 1813" required>
-        </div>
-
-        <div class="field-holder">
-          <label for="rating">Rating</label>
-          <input type="number" id="rating" placeholder="e.g., 5" required>
-        </div>
-
-        <button type="button" onclick="addBook()">+ Add</button>
-      </form>
-    </div>
-
-    <div class="catalog-container">
-      <h3>Your Book Catalog</h3>
-      <table>
-        <tr>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Genre</th>
-          <th>Year</th>
-          <th>Rating</th>
-        </tr>
-        <!-- Add table rows dynamically using JavaScript -->
-      </table>
-    </div>
-
-    <div id="edit_modal" class="modal">
-      <!-- The modal content goes here -->
-    </div>
-  </section>
-
+        <section id="book_catalog">
+           <div class="wrapped-desc">
+              <h2>Book Catalog <span>2023</span></h2>
+           </div>
+           <div class="wrapped-form">
+              <form id="book_form">
+                 <div class="field-holder">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" 
+                       placeholder="e.g., Pride and Prejudice" required>
+                 </div>
+                 <div class="field-holder">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" 
+                    placeholder="e.g., Jane Austen" required>
+                 </div>
+                 <div class="field-holder">
+                    <label for="genre">Genre</label>
+                    <select id="genre" required>
+                       <option value="" disabled selected>
+                        Select a genre</option>
+                       <option value="fiction">Fiction</option>
+                       <option value="non-fiction">Non-Fiction</option>
+                       <option value="mystery">Mystery</option>
+                       <option value="science-fiction">Science Fiction</option>
+                    </select>
+                 </div>
+                 <div class="field-holder">
+                    <label for="year">Year</label>
+                    <input type="text" id="year" 
+                    placeholder="e.g., 1813" required>
+                 </div>
+                 <div class="field-holder">
+                    <label for="rating">Rating</label>
+                    <input type="number" id="rating" 
+                    placeholder="e.g., 5" required>
+                 </div>
+                 <button type="button" onclick="addBook()">+ Add</button>
+              </form>
+           </div>
+           <div class="catalog-container">
+              <h3>Your Book Catalog</h3>
+              <table>
+                 <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Genre</th>
+                    <th>Year</th>
+                    <th>Rating</th>
+                 </tr>
+              </table>
+           </div>
+           <div id="edit_modal" class="modal">
+           </div>
+        </section>
         <script src="script.js"></script>
     </body>
 </html>
