@@ -1,14 +1,13 @@
 let testData = "Song data";
 let tbody = document.querySelector ("#movie_data");
 let addRowBtn = document.querySelector ("#btn_add_row");
-
-      //'Content-type': 'application/x-www-form-urlencoded'
+let apiUrl = "https://hypertechs.netlify.app/serrano_calib/api/movie.php";
 
 fetchRows ();
 addRowBtn.addEventListener ("click", addRow);
 
 function fetchRows () {
-  fetch ("./api/movie.php")
+  fetch (apiUrl)
   .then ((response) => response.json ())
   .then ((data) => {
     loadRows (data); 
@@ -130,7 +129,7 @@ function updateRow (formData) {
   for (let key in formData) {
     requestBody.append (key, formData[key]);
   }
-  fetch ("./api/movie.php", {
+  fetch (apiUrl, {
     method: 'PATCH',
     headers: {
       'Content-type': 'application/x-www-form-urlencoded'
@@ -148,7 +147,7 @@ function deleteRow (formData) {
 // Fetch --------------
   let requestBody = new URLSearchParams ();
   requestBody.append ('id', formData.id);
-  fetch ("./api/movie.php", {
+  fetch (apiUrl, {
     method: 'DELETE',
     headers: {
       'Content-type': 'application/x-www-form-urlencoded'
