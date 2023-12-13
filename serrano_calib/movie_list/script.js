@@ -17,7 +17,6 @@ function fetchRows () {
 }
 
 function loadRows (data) {
-  console.log (data);
   tbody.innerHTML = "";
   for (let row in data) {
 /*
@@ -38,6 +37,7 @@ function loadRows (data) {
     const deleteBtn = document.createElement ("button");
     const movieId = data[row].id;
 
+    addRowBtn.disabled = false;
     updateBtn.innerHTML = "Edit";
     deleteBtn.innerHTML = "Delete";
 
@@ -63,23 +63,44 @@ function loadRows (data) {
       let genreUpdate = document.createElement ("input");
       let lengthUpdate = document.createElement ("input");
       let saveBtn = document.createElement ("button");
+      let cancelBtn = document.createElement ("button");
+      let titleValue = directorValue = yearValue = genreValue = yearValue = "";
 
-      titleUpdate.value = titleData.innerHTML;
-      directorUpdate.value = directorData.innerHTML;
-      yearUpdate.value = yearData.innerHTML;
-      genreUpdate.value = genreData.innerHTML;
-      lengthUpdate.value = lengthData.innerHTML;
+      titleValue = titleUpdate.value = titleData.innerHTML;
+      directorValue = directorUpdate.value = directorData.innerHTML;
+      yearValue = yearUpdate.value = yearData.innerHTML;
+      genreValue = genreUpdate.value = genreData.innerHTML;
+      lengthValue = lengthUpdate.value = lengthData.innerHTML;
       titleData.innerHTML = directorData.innerHTML = yearData.innerHTML = 
         genreData.innerHTML = lengthData.innerHTML = rowAction.innerHTML = "";
       saveBtn.innerHTML = "Save";
+      cancelBtn.innerHTML = "Cancel";
+      saveBtn.disabled = true;
       titleData.append (titleUpdate);
       directorData.append (directorUpdate);
       yearData.append (yearUpdate);
       genreData.append (genreUpdate);
       lengthData.append (lengthUpdate);
       rowAction.append (saveBtn);
+      rowAction.append (cancelBtn);
 
+     titleUpdate.addEventListener ("input", checkInput);
+     directorUpdate.addEventListener ("input", checkInput);
+     genreUpdate.addEventListener ("input", checkInput);
+     yearUpdate.addEventListener ("input", checkInput);
+     lengthUpdate.addEventListener ("input",checkInput);
 
+     function checkInput () {
+       saveBtn.disabled = ((!titleUpdate.value || !directorUpdate.value ||
+         !yearUpdate.value || !genreUpdate.value || !lengthUpdate.value) || 
+         (titleUpdate.value === titleValue && 
+         directorUpdate.value === directorValue && 
+         yearUpdate.value === yearValue && 
+         genreUpdate.value === genreValue && 
+         lengthUpdate.value === lengthValue));
+     }
+
+      cancelBtn.addEventListener ("click", fetchRows); 
       saveBtn.addEventListener ("click", () => {
         let updatedData = {
           id: movieId,
@@ -157,8 +178,11 @@ function addRow () {
   let genreInput = document.createElement ("input");
   let lengthInput = document.createElement ("input");
   let saveBtn = document.createElement ("button");
+  let cancelBtn = document.createElement ("button");
 
   saveBtn.innerHTML = "Save";
+  cancelBtn.innerHTML = "Cancel";
+  saveBtn.disabled = true;
   tbody.append (trow);
   trow.append (titleData);
   trow.append (directorData);
@@ -167,13 +191,26 @@ function addRow () {
   trow.append (lengthData);
   trow.append (rowAction);
   rowAction.append (saveBtn);
+  rowAction.append (cancelBtn);
   titleData.append (titleInput);
   directorData.append (directorInput);
   yearData.append (yearInput);
   genreData.append (genreInput);
   lengthData.append (lengthInput);
 
+  titleInput.addEventListener ("input", checkInput);
+  directorInput.addEventListener ("input", checkInput);
+  genreInput.addEventListener ("input", checkInput);
+  yearInput.addEventListener ("input", checkInput);
+  lengthInput.addEventListener ("input",checkInput);
 
+  function checkInput () {
+    saveBtn.disabled = (!titleInput.value || !directorInput.value ||
+        !yearInput.value || !genreInput.value ||
+        !lengthInput.value);
+  }
+
+  cancelBtn.addEventListener ("click", fetchRows); 
   saveBtn.addEventListener ("click", () => {
     let requestBody = new FormData ();
     requestBody.append('title', titleInput.value);
@@ -186,7 +223,6 @@ function addRow () {
       body: requestBody
     }).then ((response) => response.text ())
     .then ((data) => {
-      console.log (data);
       fetchRows ();
     }); 
 
