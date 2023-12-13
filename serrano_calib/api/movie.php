@@ -1,24 +1,26 @@
 <?php
 require "./db_conn.php";
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-// $table = "favourite_movie";
-$table = "serrano_table";
+$table = "favourite_movie";
+// $table = "serrano_table";
 
 
 switch ($_SERVER['REQUEST_METHOD']) {
   case 'POST':
-/*
     $title = "EHf";
     $director = "EHf";
     $genre = "EHf";
     $year = "EHf";
     $length = "EHf";
-*/
+/*
     $title = $_POST['title'];
     $director = $_POST['director'];
     $genre = $_POST['genre'];
     $year = $_POST['year'];
     $length = $_POST['length'];
+*/
     
     $sql = "INSERT INTO $table (title, director, genre, year, length) 
       VALUES ('$title', '$director', '$genre', '$year', '$length');";
