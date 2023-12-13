@@ -123,8 +123,10 @@ function displayCatalog() {
               <td>${book.year}</td>
               <td>${book.rating}</td>
               <td>
-                  <button class="edit-btn" onclick="editBook(${book.id})">Edit</button>
-                  <button class="delete-btn" onclick="deleteBook(${book.id})">Delete</button>
+                  <button class="edit-btn" onclick="editBook(${book.id})">
+                  Edit</button>
+                  <button class="delete-btn" onclick="deleteBook(${book.id})">
+                  Delete</button>
               </td>
           `;
 
@@ -219,7 +221,7 @@ function editBook(bookId) {
     })
     .catch((error) => {
       console.error("Error in fetch operation:", error);
-      alert("An error occurred while fetching book details. Please try again later.");
+      alert("An error occurred. Please try again later.");
     });
 }
 
