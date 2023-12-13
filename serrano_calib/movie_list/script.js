@@ -173,6 +173,7 @@ function addRow () {
   genreData.append (genreInput);
   lengthData.append (lengthInput);
 
+
   saveBtn.addEventListener ("click", () => {
     let requestBody = new FormData ();
     requestBody.append('title', titleInput.value);
