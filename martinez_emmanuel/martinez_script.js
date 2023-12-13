@@ -307,13 +307,12 @@ function populateGenreDropdown(elementId) {
   });
 }
 
-// Call the function for each dropdown you want to populate
+// Call the function for each dropdown
 populateGenreDropdown("genre");
 populateGenreDropdown("edit-genre");
 
 // Fetch and display the playlist
 function displayPlaylist() {
-  // Fetch playlist data using fetch()
   fetch(backendUrl, {
     method: "GET",
   })
