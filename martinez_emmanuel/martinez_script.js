@@ -258,11 +258,8 @@ function displayCountryDetails(country, region_countries) {
   }
 }
 
-// REST API Scripts
-const backendUrl = "https://apexapp.tech/api_exercise18/martinez_backend.php";
-
-// Script for REST API section dropdown
-const musicGenres = [
+// Scripts for the REST API Section
+const musicGenres = [ // Script gor 'Genre' dropdown
   "Pop",
   "Rock",
   "Hip Hop",
@@ -311,6 +308,9 @@ function populateGenreDropdown(elementId) {
 populateGenreDropdown("genre");
 populateGenreDropdown("edit-genre");
 
+// API URL
+const backendUrl = "https://apexapp.tech/martinez_backend.php";
+
 // Fetch and display the playlist
 function displayPlaylist() {
   fetch(backendUrl, {
@@ -338,10 +338,11 @@ function displayPlaylist() {
       `;
       table.appendChild(tableHeader);
 
-      // Generate table rows for each song in the playlist
+      let totalPlays = 0; // Variable to store total plays
+
       data.forEach((song) => {
         let tableRow = document.createElement("tr");
-        tableRow.setAttribute("data-song-id", song.id); // Add this line
+        tableRow.setAttribute("data-song-id", song.id);
 
         // Display song details in table cells
         tableRow.innerHTML = `
@@ -358,14 +359,29 @@ function displayPlaylist() {
             </td>
         `;
 
+        // Add the plays to the total
+        totalPlays += parseInt(song.plays);
+
         // Append the table row to the table
         table.appendChild(tableRow);
       });
 
       // Append the table to the playlist container
       playlistContainer.appendChild(table);
+
+      // Update playlist message with total plays
+      updatePlaylistMessage(totalPlays);
     })
     .catch((error) => console.error("Error fetching playlist:", error));
+}
+
+// Function to update the playlist message
+function updatePlaylistMessage(totalPlays) {
+  let playlistMessage = document.getElementById("playlist_message");
+  playlistMessage.innerHTML = 
+  `<h3>You listened to your top songs <b>${totalPlays} times</b> this year!</h3>
+  <h3>Thanks for rocking with us, visitor. 
+  See you until next year's Wrapped 👋🏼</h3>`;
 }
 
 // Initially load the playlist
@@ -373,15 +389,15 @@ displayPlaylist();
 
 // Function to add a new song to the playlist
 function addSong() {
-  let title = document.getElementById("title").value;
-  let artist = document.getElementById("artist").value;
-  let genre = document.getElementById("genre").value;
-  let year = document.getElementById("year").value;
-  let plays = document.getElementById("plays").value;
+  let title = document.getElementById("title").value.trim();
+  let artist = document.getElementById("artist").value.trim();
+  let genre = document.getElementById("genre").value.trim();
+  let year = document.getElementById("year").value.trim();
+  let plays = document.getElementById("plays").value.trim();
 
   if (!title || !artist || !genre || !year || !plays) {
     alert("Please fill out all the fields.");
-    return; // Stop the function if validation fails
+    return;
   }
 
   // Send fetch request to the server-side script for adding a song
@@ -423,7 +439,7 @@ function addSong() {
     });
 }
 
-// letiable to store the currently editing song ID
+// Store the currently editing song ID
 let editingSongId;
 
 // Function to open the edit modal
@@ -459,15 +475,21 @@ function closeEditModal() {
 function updateSong() {
   // Get the updated song details from the edit form
   let songId = editingSongId; // Use the stored editingSongId
-  let title = document.getElementById("edit-title").value;
-  let artist = document.getElementById("edit-artist").value;
-  let genre = document.getElementById("edit-genre").value;
-  let year = document.getElementById("edit-year").value;
-  let plays = document.getElementById("edit-plays").value;
+  let title = document.getElementById("edit-title").value.trim();
+  let artist = document.getElementById("edit-artist").value.trim();
+  let genre = document.getElementById("edit-genre").value.trim();
+  let year = document.getElementById("edit-year").value.trim();
+  let plays = document.getElementById("edit-plays").value.trim();
+
+  // Validate the input values
+  if (!title || !artist || !genre || !year || !plays) {
+    alert("Please fill out all the fields.");
+    return;
+  }
 
   // Send fetch request to the server-side script for updating a song
   fetch(backendUrl, {
-    method: "PATCH", // Use 'PATCH' method for update
+    method: "PATCH",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
     },
@@ -510,7 +532,7 @@ function deleteSong(songId) {
   if (confirmDelete) {
     // Send fetch request to delete the song
     fetch(backendUrl + "?id=" + songId, {
-      method: "DELETE", // Use DELETE for deletion
+      method: "DELETE",
     })
       .then((response) => response.text())
       .then((data) => {

@@ -797,10 +797,16 @@ button.search-button:active {
   margin-top: 40px;
 }
 
+#playlist_message b {
+  color: var(--primary);
+}
+
 #playlist_message h3 {
   color: var(--text);
   font-size: 25px;
   font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 table {
