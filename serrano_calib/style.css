@@ -21,6 +21,11 @@ body {
   box-shadow: 1px 1px 9px 1px #777777;
 }
 
+#new p , #new p a{
+  text-align: center;
+  color: red;
+}
+
 #title {
   border-top-right-radius: 0.7em;
   border-top-left-radius: 0.7em;
@@ -116,4 +121,8 @@ body {
   width: 19em;
   max-width: 100%;
   vertical-align: middle;
+}
+
+td input {
+  width: 100%;
 }
