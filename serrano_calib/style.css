@@ -7,14 +7,13 @@ body {
 .content {
   margin-left: 2em;
   margin-right: 2em;
-  padding-bottom: 4em;
 }
 
 #content_container {
   background-color: #ffffff;;
   max-width: 50em;
   margin: 0 auto;
-  padding: 0px 0;
+  padding-bottom: 4em;
   border-radius: 0.7em;
   border-width: 0.1em;
   border-color: #CCCCCC;
