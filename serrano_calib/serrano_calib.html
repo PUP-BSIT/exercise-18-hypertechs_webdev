@@ -15,8 +15,9 @@
           >W</span><span class="title-text">ebpage</span>
       </h1>
     </div>
+
     <div class="content" id="new">
-      <p><a href="#song_list">NEW: Song list</a></p>
+      <p><a href="#movie_list">NEW: Song list</a></p>
       <p><a href="./country/country.html">NEW: Country Lookup</a></p>
     </div>
 
@@ -137,12 +138,30 @@
           <textarea id="form_comment_text"></textarea></p>
         <p><button id="button_comment" type="button">Add comment</button></p>
       </fieldset>
-      <!--h2 class="section-title">Favourite songs</h2>
-      <div id="song_list">
+    </div>
+
+    <div id="movie_list" class="content">
+      <h2 class="section-title">Favourite movies</h2>
         <p>Work in progress</p>
-      </div-->
-    </div></div> 
+        <table id="movie_table">
+
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Director</th>
+              <th>Year</th>
+              <th>Genre</th>
+              <th>Length</th>
+            </tr>
+          </thead>
+
+          <tbody id="movie_data">
+          </tbody>
+        </table>
+        <button type="button" id="btn_add_row">Add</button>
+    </div>
+      </div> 
     <script src="script.js"></script>
-    <!--script src="./song_list/add.js"></script-->
+    <script src="./movie_list/script.js"></script>
   </body>
 </html>
