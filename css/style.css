@@ -30,13 +30,19 @@ body {
 
 .hypertechs-title {
   font-size: 50px;
-  background-image: linear-gradient(to right, #4a4949, #5e5e5e, #b3b3b3, #747e7f);
+  background-image: linear-gradient(
+    to right,
+    #4a4949,
+    #5e5e5e,
+    #b3b3b3,
+    #747e7f
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   display: inline-block;
-  background-size: 200% auto; 
-  animation: gradientAnimation 4s linear infinite; 
+  background-size: 200% auto;
+  animation: gradientAnimation 4s linear infinite;
 }
 
 @keyframes gradientAnimation {
