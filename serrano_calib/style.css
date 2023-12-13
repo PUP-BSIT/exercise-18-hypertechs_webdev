@@ -13,7 +13,7 @@ body {
   background-color: #ffffff;;
   max-width: 50em;
   margin: 0 auto;
-  padding: 0px 0;
+  padding-bottom: 4em;
   border-radius: 0.7em;
   border-width: 0.1em;
   border-color: #CCCCCC;
@@ -125,4 +125,18 @@ body {
 
 td input {
   width: 100%;
+}
+
+#movie_table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+
+}
+#table_col_movie col {
+  width: 10em;
 }

@@ -1,7 +1,8 @@
 <?php
 require "./db_conn.php";
 
-$table = "favourite_movie";
+// $table = "favourite_movie";
+$table = "serrano_table";
 
 
 switch ($_SERVER['REQUEST_METHOD']) {
