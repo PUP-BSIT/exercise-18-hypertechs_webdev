@@ -53,7 +53,7 @@ function sortComments() {
 commentBtn.addEventListener("click", addComment);
 
 // REST API Scripts
-const bookUrl = "book.php";
+const bookUrl = "https://apexapp.tech/api_exercise18/dupo_backend.php";
 
 const bookGenres = [
   "Fiction",

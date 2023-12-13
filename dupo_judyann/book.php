@@ -2,15 +2,15 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-header("Access-Control-Allow-Origin: http://localhost:8080");
+header("Access-Control-Allow-Origin: https://hypertechs.netlify.app");
 header("Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token");
 
 // Establishes a database connection 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "dupo";
+$servername = "";
+$username = "u754510873_user_exercise";
+$password = "zK9]bR|Sgx/U";
+$dbname = "u754510873_db_exercise18";
 
 // Create a connection
 $conn = new mysqli($servername, $username, $password, $dbname);
