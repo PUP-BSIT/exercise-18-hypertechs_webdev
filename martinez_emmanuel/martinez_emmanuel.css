@@ -18,6 +18,38 @@ body {
   padding: 0;
 }
 
+.header-feature {
+  background-color: var(--accent); /* Choose a color that complements your site's theme */
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+
+.feature-text-link {
+  text-decoration: none;
+  color: #fff; /* Set the desired text color */
+  cursor: pointer;
+}
+
+
+.feature-text {
+  margin: 0;
+  font-size: 1.2em;
+  animation: pulse 2s infinite; /* Add a pulsing animation */
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+
+
 header {
   background-color: var(--background);
   padding: 20px;
