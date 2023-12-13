@@ -192,3 +192,65 @@ div.com-5{
 input#name, input#comment{
 	width: 195px;
 }
+
+div.updates{
+	background-color: whitesmoke;
+	color: black;
+}
+
+/*START OF CACTUS STYLING*/
+
+.cactus-div{
+	color: whitesmoke;
+}
+
+#cacti_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cactus-entry {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px; 
+}
+
+#add_cactus_form {
+    max-width: 300px; 
+    margin-bottom: 20px;
+}
+
+/* Style the form inputs */
+#add_cactus_form input[type="text"],
+#add_cactus_form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+/* Adjust the button style */
+#add_cactus_form input[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.cactus-entry p {
+    margin: 5px 0;
+    width: calc(200% - 200px);  
+    
+}
+
+.cactus-entry p::before {
+    content: attr(data-label);
+    font-weight: bold;
+    width: 200px;  
+}
+
+#cactus_id{
+	text-align: center;
+	border:10px solid greenyellow ;
+}
