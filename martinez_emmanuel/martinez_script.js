@@ -309,7 +309,7 @@ populateGenreDropdown("genre");
 populateGenreDropdown("edit-genre");
 
 // API URL
-const backendUrl = "https://apexapp.tech/martinez_backend.php";
+const backendUrl = "https://apexapp.tech/api_exercise18/martinez_backend.php";
 
 // Fetch and display the playlist
 function displayPlaylist() {
