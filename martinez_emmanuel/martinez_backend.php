@@ -110,9 +110,12 @@ switch ($method) {
 
     case 'OPTIONS':
         // Respond to preflight requests
-        header("Access-Control-Allow-Origin: https://hypertechs.netlify.app");
-        header("Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS");
-        header("Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token");
+        header("Access-Control-Allow-Origin: 
+                https://hypertechs.netlify.app");
+        header("Access-Control-Allow-Methods: 
+                GET, POST, PATCH, PUT, DELETE, OPTIONS");
+        header("Access-Control-Allow-Headers: Origin, Content-Type, 
+                X-Auth-Token");
         header('Content-Type: application/json');
         http_response_code(200);
         break;
