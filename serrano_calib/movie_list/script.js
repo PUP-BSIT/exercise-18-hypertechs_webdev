@@ -1,7 +1,7 @@
 let testData = "Song data";
 let tbody = document.querySelector ("#movie_data");
 let addRowBtn = document.querySelector ("#btn_add_row");
-let apiUrl = "https://hypertechs.netlify.app/serrano_calib/api/movie.php";
+let apiUrl = "https://apexapp.tech/api_exercise18/movie.php"; 
 
 fetchRows ();
 addRowBtn.addEventListener ("click", addRow);
@@ -217,7 +217,7 @@ function addRow () {
     requestBody.append('year', yearInput.value);
     requestBody.append('genre', genreInput.value);
     requestBody.append('length', lengthInput.value);
-    fetch ("./api/movie.php", {
+    fetch (apiUrl, {
       method: 'POST',
       body: requestBody
     }).then ((response) => response.text ())
