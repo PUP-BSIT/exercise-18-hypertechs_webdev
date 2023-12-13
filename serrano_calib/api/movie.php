@@ -1,7 +1,19 @@
 <?php
-require "./db_conn.php";
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+
+/*
+$host = "localhost";
+$username = "calib";
+$db = "movie";
+*/
+
+$host = "127.0.0.1:3306";
+$username = "u754510873_user_exercise";
+$password = "zK9]bR|Sgx/U";
+$dbname = "u754510873_db_exercise18";
+$conn = mysqli_connect ($host, $username, $password, $db);
+if (!$conn) return;
 
 // $table = "favourite_movie";
 $table = "serrano_table";
